@@ -1,12 +1,5 @@
--- =========================================
--- EXPERIMENT: VIEWS AND INDEXES
--- =========================================
-
 SET SERVEROUTPUT ON;
 
--- =========================================
--- DROP TABLES
--- =========================================
 BEGIN EXECUTE IMMEDIATE 'DROP TABLE customer'; EXCEPTION WHEN OTHERS THEN NULL; END;
 /
 BEGIN EXECUTE IMMEDIATE 'DROP TABLE products'; EXCEPTION WHEN OTHERS THEN NULL; END;

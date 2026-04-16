@@ -1,7 +1,3 @@
--- =========================================
--- EXP NO: 4
--- JOIN OPERATIONS
--- =========================================
 BEGIN
 EXECUTE IMMEDIATE 'DROP TABLE order_items';
 EXCEPTION WHEN OTHERS THEN NULL;

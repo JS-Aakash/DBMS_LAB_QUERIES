@@ -1,7 +1,3 @@
-/* =========================================
-   CLEANUP (so script can run multiple times)
-========================================= */
-
 DROP TABLE orders;
 DROP TABLE product;
 DROP TABLE customer;
@@ -12,10 +8,6 @@ DROP TABLE officer;
 DROP TABLE cases;
 DROP TABLE crime;
 DROP TABLE victim;
-
-/* =========================================
-   TABLE CREATION
-========================================= */
 
 CREATE TABLE employee (
     emp_id INT PRIMARY KEY,
@@ -80,10 +72,6 @@ CREATE TABLE victim (
     name VARCHAR(50)
 );
 
-/* =========================================
-   INSERT DATA
-========================================= */
-
 -- Departments
 INSERT INTO dept VALUES (1,'IT');
 INSERT INTO dept VALUES (2,'HR');
@@ -135,11 +123,6 @@ INSERT INTO cases VALUES (2,1,'solved','City1',2);
 INSERT INTO cases VALUES (3,2,'unsolved','City2',3);
 INSERT INTO cases VALUES (4,3,'unsolved','City1',1);
 
-
-/* =========================================
-   QUERIES
-========================================= */
-
 -- 1. Employees earning more than average
 SELECT * FROM employee
 WHERE salary > (SELECT AVG(salary) FROM employee);
@@ -188,10 +171,6 @@ WHERE salary IN (
         ORDER BY salary DESC
     ) WHERE ROWNUM <= 3
 );
-
--- ===============================
--- CRIME MANAGEMENT QUERIES
--- ===============================
 
 -- 8. Officers who solved most cases
 SELECT officer_id

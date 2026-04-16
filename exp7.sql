@@ -1,13 +1,5 @@
--- =========================================
--- EXPERIMENT: CURSOR OPERATIONS
--- =========================================
-
--- Enable output
 SET SERVEROUTPUT ON;
 
--- =========================================
--- CLEANUP (avoid table already exists error)
--- =========================================
 BEGIN
    EXECUTE IMMEDIATE 'DROP TABLE customer_order';
 EXCEPTION

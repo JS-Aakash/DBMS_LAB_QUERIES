@@ -1,4 +1,3 @@
--- Drop (ignore errors if first time)
 DROP TABLE sales_transactions;
 DROP TABLE customers;
 DROP TABLE mobilephones;
